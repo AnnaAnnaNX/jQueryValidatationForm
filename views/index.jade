@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form#form1(action="")
+    fieldset
+      label Query
+      input#quert(name="query", type="text", required)
+    fieldset
+      label Count
+      input#count(name="count", type="text", required)
+    fieldset
+      label Age from 
+      input#from(name="from", type="text")
+    fieldset
+      label to
+      input#to(name="to", type="text")
+    fieldset
+      label Select social network (required)
+      select#network(name="network")
+        option(selected, value="0") -- select an option --"
+        option(value="1") value1
+        option(value="2") value2
+        option(value="3") value3
+    fieldset
+      label Select platform (optional)
+      select#platform
+        option(disabled, selected, value="0") -- select an option --"
+        option(value="1") value1
+        option(value="2") value2
+        option(value="3") value3
+    fieldset
+    fieldset
+    fieldset
+      input(type="submit", value="Отправить")
